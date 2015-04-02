@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name="app.koala.com.taobao.activity.badyActivity"/>
+        <activity android:name="app.koala.com.taobao.activity.babyActivity"/>
         <activity android:name="app.koala.com.taobao.activity.wareActivity"/>
         <activity android:name="app.koala.com.taobao.activity.helloSensor"/>
 

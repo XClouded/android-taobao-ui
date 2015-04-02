@@ -60,10 +60,42 @@ public class cart extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.bt_cart_all:
+                if(this.allbaby == null){
+                    this.allbaby = new allbaby();
+                    this.addFragment(this.allbaby);
+                    this.showFragment(this.allbaby);
+                }else{
+                    this.showFragment(this.allbaby);
+                }
+
+                this.show_cart_all.setBackgroundColor(getResources().getColor(R.color.bg_Black));
+                this.show_cart_low.setBackgroundColor(getResources().getColor(R.color.bg_Gray));
+                this.show_cart_stock.setBackgroundColor(getResources().getColor(R.color.bg_Gray));
+
                 break;
             case R.id.bt_cart_low:
+                if(this.lowbaby == null){
+                    this.lowbaby = new lowbaby();
+                    this.addFragment(this.lowbaby);
+                }
+
+                this.showFragment(this.lowbaby);
+
+                this.show_cart_all.setBackgroundColor(getResources().getColor(R.color.bg_Gray));
+                this.show_cart_low.setBackgroundColor(getResources().getColor(R.color.bg_Black));
+                this.show_cart_stock.setBackgroundColor(getResources().getColor(R.color.bg_Gray));
+
                 break;
             case R.id.bt_cart_stock:
+                if(this.stockbaby == null){
+                    this.stockbaby = new stockbaby();
+                    this.addFragment(this.stockbaby);
+                }
+                this.showFragment(this.stockbaby);
+
+                this.show_cart_all.setBackgroundColor(getResources().getColor(R.color.bg_Gray));
+                this.show_cart_low.setBackgroundColor(getResources().getColor(R.color.bg_Gray));
+                this.show_cart_stock.setBackgroundColor(getResources().getColor(R.color.bg_Black));
                 break;
             default:
                 break;
