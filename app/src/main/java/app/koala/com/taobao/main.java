@@ -104,8 +104,10 @@ public class main extends FragmentActivity implements View.OnClickListener, IBtn
             case R.id.iv_menu_4:
                 if(this.user == null){
                     this.user = new user();
-                    this.addFragment(this.user);
-                    this.showFragment(this.user);
+                    if(!this.user.isHidden()) {
+                        this.addFragment(this.user);
+                        this.showFragment(this.user);
+                    }
                 }else{
                     if(this.user.isHidden()){
                         this.showFragment(this.user);
